@@ -1,5 +1,6 @@
 from oop_01.inheritance_03.person import Person
 
+
 class Employee(Person):
     def __init__(self, person_id, person_name, person_gross_salary, person_job, over_time_hours, over_time_rate):
         # call the parent constructor from the child constructor using super() keyword
@@ -17,7 +18,7 @@ class Employee(Person):
     # Extra Methods
     def calc_monthly_net_salary(self):
         tax = 10
-        return (self._person_gross_salary - self._person_gross_salary * tax / 100
+        return (self.__person_gross_salary - self.__person_gross_salary * tax / 100
                 + self.__over_time_hours * self.__over_time_rate)
 
     def calc_annual_net_salary(self):
