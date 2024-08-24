@@ -18,8 +18,12 @@ class Employee(Person):
     # Extra Methods
     def calc_monthly_net_salary(self):
         tax = 10
-        return (self.__person_gross_salary - self.__person_gross_salary * tax / 100
+        return (self._person_gross_salary - self._person_gross_salary * tax / 100
                 + self.__over_time_hours * self.__over_time_rate)
 
     def calc_annual_net_salary(self):
         return self.calc_monthly_net_salary() * 12
+
+    def print_person_details(self):
+        print('Monthly net salary =', self.calc_monthly_net_salary())
+        print('Annual net salary = ', self.calc_annual_net_salary())

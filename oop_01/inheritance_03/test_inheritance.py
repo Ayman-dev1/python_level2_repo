@@ -14,3 +14,6 @@ print('Monthly net salary = ', mgr_khaled.calc_monthly_net_salary())  # 13500
 print('Annual net salary = ', mgr_khaled.calc_annual_net_salary())  # 162000
 company_profit = 1_000_000.00
 print('Annual net salary with profit = ', mgr_khaled.calc_annual_net_salary_profit(company_profit))  # 262000
+
+print('-------Check for Method Overriding ------')
+emp_ahmed.print_person_details()
