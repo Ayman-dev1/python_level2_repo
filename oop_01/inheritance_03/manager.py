@@ -20,3 +20,6 @@ class Manager(Person):
 
     def calc_annual_net_salary_profit(self, company_profit):
         return self.calc_annual_net_salary() + company_profit * self.__profit_percentage / 100
+
+    def calc_expenses(self):
+        print('This is Expenses function in manager class')

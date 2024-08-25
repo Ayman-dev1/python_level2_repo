@@ -24,6 +24,12 @@ class Employee(Person):
     def calc_annual_net_salary(self):
         return self.calc_monthly_net_salary() * 12
 
+    # Method Overriding
     def print_person_details(self):
+        # I need to call function from the parent class
+        super().print_person_details()
         print('Monthly net salary =', self.calc_monthly_net_salary())
         print('Annual net salary = ', self.calc_annual_net_salary())
+
+    def calc_expenses(self):
+        print('This is Expenses function in Employee class')

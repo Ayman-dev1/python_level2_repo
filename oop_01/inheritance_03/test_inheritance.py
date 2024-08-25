@@ -17,3 +17,28 @@ print('Annual net salary with profit = ', mgr_khaled.calc_annual_net_salary_prof
 
 print('-------Check for Method Overriding ------')
 emp_ahmed.print_person_details()
+
+print('-------- Check for Polymorphism --------')
+
+
+def print_data_for_all(person):
+    if isinstance(person, Employee):
+        print('This is an employee object')
+        print('person id = ', person.get_person_id())
+        print('monthly net salary = ', person.calc_monthly_net_salary())
+        print('--------')
+    else:
+        print('This is a manager object')
+        print('person id = ', person.get_person_id())
+        print('monthly net salary = ', person.calc_monthly_net_salary())
+        print('--------')
+
+
+# test Main program - call the function
+print_data_for_all(emp_ahmed)
+print_data_for_all(mgr_khaled)
+
+
+print('------ Check For Abstraction -------')
+emp_ahmed.calc_expenses()
+mgr_khaled.calc_expenses()
